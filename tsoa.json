@@ -1,0 +1,21 @@
+{
+    "swagger": {
+
+        "description": "Boilerplate project for a TypeScript API with TSOA, ExpressJS and Swagger UI",
+        "version": "0.1.0",
+        "name": "tsoa-app",
+    
+        "outputDirectory": "./src",
+        "entryFile": "./src/server.ts",
+        "host": "localhost:1202",
+        "basePath": "/api"
+    },
+    "routes": {
+        "basePath": "/api",
+        "entryFile": "./src/server.ts",
+        "routesDir": "./src"
+    },
+    "ignore": [
+      "**/node_modules/**"
+    ]
+  }

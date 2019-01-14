@@ -1,0 +1,35 @@
+{
+  "name": "tsoa-app",
+  "version": "0.1.0",
+  "description": "Boilerplate project for a TypeScript API with TSOA, ExpressJS and Swagger UI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jesusfchavarro/tsoa-app"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node ./dist/server.js",
+    "build": "npm run swagger-gen && npm run routes-gen && tsc",
+    "lint": "tslint ./src/**/*.ts",
+    "swagger-gen": "tsoa swagger",
+    "routes-gen": "tsoa routes"
+  },
+  "author": "Jesus F. Chavarro",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.2",
+    "express": "^4.16.4",
+    "method-override": "^3.0.0",
+    "swagger-ui-express": "^1.0.5",
+    "tsoa": "^2.3.8"
+  },
+  "devDependencies": {
+    "@types/body-parser": "0.0.30",
+    "@types/express": "^4.16.0",
+    "@types/method-override": "0.0.27",
+    "@types/swagger-ui-express": "^3.0.0",
+    "@types/node": "^10.12.18",
+    "typescript": "^3.2.2"
+  }
+}

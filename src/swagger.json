@@ -1,0 +1,69 @@
+{
+	"basePath": "/api",
+	"consumes": [
+		"application/json"
+	],
+	"definitions": {
+		"HelloWorld": {
+			"properties": {
+				"msg": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"msg",
+				"name"
+			],
+			"type": "object"
+		}
+	},
+	"info": {
+		"title": "tsoa-app",
+		"version": "0.1.0",
+		"description": "Boilerplate project for a TypeScript API with TSOA, ExpressJS and Swagger UI",
+		"license": {
+			"name": "ISC"
+		}
+	},
+	"paths": {
+		"/HelloWorld/{name}": {
+			"get": {
+				"operationId": "GetHelloWorld",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/HelloWorld"
+						}
+					}
+				},
+				"tags": [
+					"Info",
+					"Get",
+					"HelloWorld"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"type": "string"
+					}
+				]
+			}
+		}
+	},
+	"produces": [
+		"application/json"
+	],
+	"swagger": "2.0",
+	"securityDefinitions": {},
+	"host": "localhost:1202"
+}
